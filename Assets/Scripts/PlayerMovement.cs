@@ -6,9 +6,11 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float moveSpeed;
-
+    public GameObject player;
     public Rigidbody2D rb;
     public Animator animator;
+    public GameObject crate;
+    public bool hasKey;
 
     // Update is called once per frame
     void Update()
@@ -24,5 +26,24 @@ public class PlayerMovement : MonoBehaviour
         
         animator.SetFloat("Speed", newVelocity.sqrMagnitude);
 
+        
+
+    }
+
+    //Sam
+    public void doorOpen()
+    {
+        if (crate.GetComponent<PuzzleOpen>().hasKey)
+        {
+            this.transform.position = new Vector3(8,1,-1);
+        }
+    }
+
+    public void doorin()
+    {
+        if (crate.GetComponent<PuzzleOpen>().hasKey)
+        {
+            this.transform.position = new Vector3(6, 1, -1);
+        }
     }
 }
