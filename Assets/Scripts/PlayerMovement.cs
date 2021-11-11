@@ -11,7 +11,10 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public GameObject crate;
     public bool hasKey;
+<<<<<<< HEAD
     public bool isFree;
+=======
+>>>>>>> 4ad9ab75ef3a343770c3299e37d97c590e6fe41d
 
     // Update is called once per frame
     void Update()
@@ -30,5 +33,24 @@ public class PlayerMovement : MonoBehaviour
 
         
 
+        
+
+    }
+
+    //Sam
+    public void doorOpen()
+    {
+        if (crate.GetComponent<PuzzleOpen>().hasKey)
+        {
+            this.transform.position = new Vector3(8,1,-1);
+        }
+    }
+
+    public void doorin()
+    {
+        if (crate.GetComponent<PuzzleOpen>().hasKey)
+        {
+            this.transform.position = new Vector3(6, 1, -1);
+        }
     }
 }

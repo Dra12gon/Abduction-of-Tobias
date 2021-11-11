@@ -8,7 +8,10 @@ public class Interactable : MonoBehaviour
     public bool isInRange;
     public KeyCode interactKey;
     public UnityEvent interactAction;
+<<<<<<< HEAD
     public GameObject EPopup;
+=======
+>>>>>>> 4ad9ab75ef3a343770c3299e37d97c590e6fe41d
 
     // Update is called once per frame
     void Update()
@@ -18,7 +21,10 @@ public class Interactable : MonoBehaviour
             if (Input.GetKeyDown(interactKey))
             {
                 interactAction.Invoke();
+<<<<<<< HEAD
                 gameObject.SetActive(false);
+=======
+>>>>>>> 4ad9ab75ef3a343770c3299e37d97c590e6fe41d
             }
         }
     }
@@ -29,7 +35,10 @@ public class Interactable : MonoBehaviour
         {
             isInRange = true;
             print("Player now in range");
+<<<<<<< HEAD
             EPopup.SetActive(true);
+=======
+>>>>>>> 4ad9ab75ef3a343770c3299e37d97c590e6fe41d
         }
     }
 
@@ -39,7 +48,10 @@ public class Interactable : MonoBehaviour
         {
             isInRange = false;
             print("Player now not in range");
+<<<<<<< HEAD
             EPopup.SetActive(false);
+=======
+>>>>>>> 4ad9ab75ef3a343770c3299e37d97c590e6fe41d
         }
     }
 }
