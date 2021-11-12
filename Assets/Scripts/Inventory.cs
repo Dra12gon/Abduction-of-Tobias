@@ -5,23 +5,31 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public bool hasitem;
-    public GameObject crate;
-    public Sprite Item;
-    public Image inven;
+    public GameObject key;
+    public GameObject flashlight;
+    public GameObject cloth;
+
 
     // Update is called once per frame
     void Update()
     {
-        if (crate.GetComponent<PuzzleOpen>().hasKey)
+        if (PuzzleOpen.hasKey == true)
         {
-            inven.sprite = Item;
+            key.SetActive(true);
         }
 
-        if (crate.GetComponent<PuzzleOpen>().hasLight)
+        if (PuzzleOpen.hasLight == true)
         {
-            inven.sprite = Item;
+            flashlight.SetActive(true);
         }
-        
+
+        if (Cloth.hasCloth == true)
+        {
+            cloth.SetActive(true);
+        }
+        else if (Cloth.hasCloth == false)
+        {
+            cloth.SetActive(false);
+        }
     }
 }

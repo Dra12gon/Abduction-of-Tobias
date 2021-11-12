@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class Interactable : MonoBehaviour
+public class Cloth : MonoBehaviour
 {
     public bool isInRange;
     public GameObject EPopup;
-
+    public static bool hasCloth = false;
 
     void Update()
     {
@@ -16,6 +15,7 @@ public class Interactable : MonoBehaviour
             if (Input.GetKeyDown("e"))
             {
                 gameObject.SetActive(false);
+                hasCloth = true;
             }
         }
     }
