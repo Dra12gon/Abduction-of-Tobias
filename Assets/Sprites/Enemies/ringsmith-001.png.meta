@@ -1,43 +1,43 @@
 fileFormatVersion: 2
-guid: 406c5d9d59842924a812d8aa818d92aa
+guid: 0eef8179717ff8f4cbfd6811eaa18504
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6366282507208634749
-    second: Tobias_0
+      213: -72523560417645022
+    second: ringsmith-001_0
   - first:
-      213: 7587089855585682904
-    second: Tobias_1
+      213: 3979013780770316269
+    second: ringsmith-001_1
   - first:
-      213: 5397947056246634949
-    second: Tobias_2
+      213: -6968350577661467467
+    second: ringsmith-001_2
   - first:
-      213: 4615714905785745566
-    second: Tobias_3
+      213: -4238915090497147147
+    second: ringsmith-001_3
   - first:
-      213: -4869225918137854092
-    second: Tobias_4
+      213: -8046184610972387627
+    second: ringsmith-001_4
   - first:
-      213: 2398601598732548788
-    second: Tobias_5
+      213: -3193835884620152163
+    second: ringsmith-001_5
   - first:
-      213: 8089075693439166399
-    second: Tobias_6
+      213: 5503522540887512804
+    second: ringsmith-001_6
   - first:
-      213: 7289989187714083861
-    second: Tobias_7
+      213: -8554415696801666783
+    second: ringsmith-001_7
   - first:
-      213: 8277315075269552102
-    second: Tobias_8
+      213: 1906808154927200418
+    second: ringsmith-001_8
   - first:
-      213: 3379900971776676118
-    second: Tobias_9
+      213: -7689896946060178376
+    second: ringsmith-001_9
   - first:
-      213: 1293452865510946305
-    second: Tobias_10
+      213: 4532048532449603584
+    second: ringsmith-001_10
   - first:
-      213: 7004545727937292448
-    second: Tobias_11
+      213: -2008535235638981992
+    second: ringsmith-001_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tobias_0
+      name: ringsmith-001_0
       rect:
         serializedVersion: 2
         x: 0
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7134f5d534995850800000000000000
-      internalID: 6366282507208634749
+      spriteID: 22ea57fb4385efef0800000000000000
+      internalID: -72523560417645022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tobias_1
+      name: ringsmith-001_1
       rect:
         serializedVersion: 2
         x: 48
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d587298602ca4960800000000000000
-      internalID: 7587089855585682904
+      spriteID: defd23fa3fb483730800000000000000
+      internalID: 3979013780770316269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tobias_2
+      name: ringsmith-001_2
       rect:
         serializedVersion: 2
         x: 96
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c932f38f3c59ea40800000000000000
-      internalID: 5397947056246634949
+      spriteID: 5b4a91cc1127b4f90800000000000000
+      internalID: -6968350577661467467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tobias_3
+      name: ringsmith-001_3
       rect:
         serializedVersion: 2
         x: 0
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e90c5df60405e0040800000000000000
-      internalID: 4615714905785745566
+      spriteID: 5feefd51f295c25c0800000000000000
+      internalID: -4238915090497147147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tobias_4
+      name: ringsmith-001_4
       rect:
         serializedVersion: 2
         x: 48
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 477944263d80d6cb0800000000000000
-      internalID: -4869225918137854092
+      spriteID: 5d6b6c11ab5365090800000000000000
+      internalID: -8046184610972387627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tobias_5
+      name: ringsmith-001_5
       rect:
         serializedVersion: 2
         x: 96
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ba332a127b894120800000000000000
-      internalID: 2398601598732548788
+      spriteID: d9202524f273da3d0800000000000000
+      internalID: -3193835884620152163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tobias_6
+      name: ringsmith-001_6
       rect:
         serializedVersion: 2
         x: 0
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb720b44c7b224070800000000000000
-      internalID: 8089075693439166399
+      spriteID: 4e694fe8790706c40800000000000000
+      internalID: 5503522540887512804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tobias_7
+      name: ringsmith-001_7
       rect:
         serializedVersion: 2
         x: 48
@@ -300,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51ce22eca8e3b2560800000000000000
-      internalID: 7289989187714083861
+      spriteID: 1296c1b3f3c984980800000000000000
+      internalID: -8554415696801666783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tobias_8
+      name: ringsmith-001_8
       rect:
         serializedVersion: 2
         x: 96
@@ -321,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e76d63b43eeed270800000000000000
-      internalID: 8277315075269552102
+      spriteID: 2a8f0490ae7567a10800000000000000
+      internalID: 1906808154927200418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tobias_9
+      name: ringsmith-001_9
       rect:
         serializedVersion: 2
         x: 0
@@ -342,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6111fbeb602d7ee20800000000000000
-      internalID: 3379900971776676118
+      spriteID: 83cc8ba687ff74590800000000000000
+      internalID: -7689896946060178376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tobias_10
+      name: ringsmith-001_10
       rect:
         serializedVersion: 2
         x: 48
@@ -363,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 106bd76378443f110800000000000000
-      internalID: 1293452865510946305
+      spriteID: 0003d71e02215ee30800000000000000
+      internalID: 4532048532449603584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tobias_11
+      name: ringsmith-001_11
       rect:
         serializedVersion: 2
         x: 96
@@ -384,8 +384,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a8aea65a35253160800000000000000
-      internalID: 7004545727937292448
+      spriteID: 89a02e848df3024e0800000000000000
+      internalID: -2008535235638981992
       vertices: []
       indices: 
       edges: []

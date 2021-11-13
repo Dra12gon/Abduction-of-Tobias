@@ -1,31 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PuzzleOpen : MonoBehaviour
+public class Pot : MonoBehaviour
 {
-    public bool isOpen = false;
-    public static bool hasKey = false;
-    public static bool hasLight = false;
     public bool isInRange;
     public GameObject EPopup;
     public GameObject dialogBox;
     public Text dialogText;
     public string dialog;
 
+
     void Update()
     {
         if (isInRange)
         {
-            if (Input.GetKeyDown("e") && PlayerMovement.isFree == true)
+            if (Input.GetKeyDown("e") && Cloth.hasCloth == true)
             {
-                hasKey = true;
-                hasLight = true;
-                gameObject.SetActive(false); //put this in another if statement when you add the puzzle screen
+                gameObject.SetActive(false);
+                PlayerMovement.isFree = true;
+                Cloth.hasCloth = false; 
             }
-            else if (Input.GetKeyDown("e") && PlayerMovement.isFree == false)
+            else if (Input.GetKeyDown("e") && Cloth.hasCloth == false)
             {
                 if (dialogBox.activeInHierarchy)
                 {
@@ -39,30 +36,6 @@ public class PuzzleOpen : MonoBehaviour
             }
         }
     }
-
-    public void OpenBox()
-    {
-        if (isOpen == false)
-        {
-            isOpen = true;
-            print("opened");
-            hasKey = true;
-            this.GetComponent<SpriteRenderer>().material.color = new Color(255, 255, 255, 0);
-        }
-
-    }
-    public void OpenPot()
-    {
-        if (isOpen == false)
-        {
-            isOpen = true;
-            print("opened");
-            hasLight = true;
-            this.GetComponent<SpriteRenderer>().material.color = new Color(255, 255, 255, 0);
-        }
-
-    }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -83,6 +56,7 @@ public class PuzzleOpen : MonoBehaviour
             print("Player now not in range");
             EPopup.SetActive(false);
             dialogBox.SetActive(false);
+
         }
     }
 }
