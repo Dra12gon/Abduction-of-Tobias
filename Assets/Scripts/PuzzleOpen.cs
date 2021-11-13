@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PuzzleOpen : MonoBehaviour
 {
-    public bool isOpen = false;
+    public static bool isOpen = false;
     public static bool hasKey = false;
     public static bool hasLight = false;
     public bool isInRange;
