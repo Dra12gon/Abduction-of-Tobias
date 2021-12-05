@@ -21,9 +21,16 @@ public class PuzzleOpen : MonoBehaviour
         {
             if (Input.GetKeyDown("e") && PlayerMovement.isFree == true)
             {
-                hasKey = true;
-                hasLight = true;
-                gameObject.SetActive(false); //put this in another if statement when you add the puzzle screen
+                if (PuzzleScript.solved == true)
+                {
+                    hasKey = true;
+                    hasLight = true;
+                    gameObject.SetActive(false);
+                }
+                else
+                {
+                    SceneManager.LoadSceneAsync("Puzzle");
+                }
             }
             else if (Input.GetKeyDown("e") && PlayerMovement.isFree == false)
             {

@@ -28,9 +28,11 @@ public class PlayerMovement : MonoBehaviour
 
             animator.SetFloat("Speed", newVelocity.sqrMagnitude);
             animator.SetBool("isFree", isFree);
+            
         }
         else if (Enemy.gameOver == true)
         {
+            animator.SetBool("gameOver", Enemy.gameOver);
             if (Input.GetKeyDown("space"))
             {
                 SceneManager.LoadScene("Level1");
@@ -41,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
                 PuzzleOpen.isOpen = false;
                 PuzzleOpen.hasKey = false;
                 PuzzleOpen.hasLight = false;
+                PuzzleScript.solved = false;
             }
         }
     }
