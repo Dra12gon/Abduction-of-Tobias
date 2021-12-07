@@ -10,6 +10,10 @@ public class Enemy : MonoBehaviour
     private Vector2 movement;
     public Animator animator;
     public Vector3 dir;
+    public GameObject gameOverText;
+    public static bool gameOver = false;
+    public GameObject flash;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +36,7 @@ public class Enemy : MonoBehaviour
             animator.SetFloat("Horizontal", dir.x);
             animator.SetFloat("Vertical", dir.y);
         }
+        
     }
     private void FixedUpdate()
     {
@@ -41,4 +46,18 @@ public class Enemy : MonoBehaviour
     {
         rb.MovePosition((Vector2)transform.position + (dir * moveSpeed * Time.deltaTime));
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            gameOverText.SetActive(true);
+            gameOver = true;
+            Time.timeScale = 0f;
+            flash.SetActive(false);
+        }
+    }
+
+
+
 }
