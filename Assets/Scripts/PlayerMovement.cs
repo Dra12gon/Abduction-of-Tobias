@@ -30,21 +30,5 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isFree", isFree);
             
         }
-        else if (Enemy.gameOver == true)
-        {
-            animator.SetBool("gameOver", Enemy.gameOver);
-            if (Input.GetKeyDown("space"))
-            {
-                SceneManager.LoadScene("Level1");
-                Enemy.gameOver = false;
-                isFree = false;
-                Cloth.hasCloth = false;
-                OpenDoor.isOpen = false;
-                PuzzleOpen.isOpen = false;
-                PuzzleOpen.hasKey = false;
-                PuzzleOpen.hasLight = false;
-                PuzzleScript.solved = false;
-            }
-        }
     }
 }

@@ -10,6 +10,7 @@ public class PuzzleScript : MonoBehaviour
     public PuzzleManager[] tiles;
     private int emptySpaceIndex = 11;
     public static bool solved = false;
+    public bool skip = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,7 @@ public class PuzzleScript : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
             if (hit)
             {
-                if (Vector2.Distance(a:emptySpace.position, b:hit.transform.position)<3.5)
+                if (Vector2.Distance(a: emptySpace.position, b: hit.transform.position) < 3.5)
                 {
                     Vector2 lastEmptySpacePos = emptySpace.position;
                     PuzzleManager thisTile = hit.transform.GetComponent<PuzzleManager>();
@@ -53,7 +54,7 @@ public class PuzzleScript : MonoBehaviour
                 }
 
             }
-            if (correctTiles == tiles.Length - 1)
+            if (correctTiles == tiles.Length - 1 || skip == true)
             {
                 Debug.Log("solved");
                 solved = true;
@@ -61,7 +62,10 @@ public class PuzzleScript : MonoBehaviour
             }
         }
     }
-
+    public void skipPuzzle()
+    {
+        skip = true;
+    }
 
     public void Shuffle()
     {

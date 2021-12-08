@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public Vector3 dir;
     public GameObject gameOverText;
     public static bool gameOver = false;
+    public GameObject flash;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +53,8 @@ public class Enemy : MonoBehaviour
         {
             gameOverText.SetActive(true);
             gameOver = true;
+            //Time.timeScale = 0f;
+            flash.SetActive(false);
         }
     }
 

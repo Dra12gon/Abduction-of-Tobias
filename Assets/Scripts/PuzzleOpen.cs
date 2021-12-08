@@ -9,6 +9,7 @@ public class PuzzleOpen : MonoBehaviour
     public static bool isOpen = false;
     public static bool hasKey = false;
     public static bool hasLight = false;
+    public GameObject light;
     public bool isInRange;
     public GameObject EPopup;
     public GameObject dialogBox;
@@ -26,6 +27,7 @@ public class PuzzleOpen : MonoBehaviour
                     hasKey = true;
                     hasLight = true;
                     gameObject.SetActive(false);
+                    light.SetActive(true);
                 }
                 else
                 {
