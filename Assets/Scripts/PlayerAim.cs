@@ -16,13 +16,13 @@ public class PlayerAim : MonoBehaviour
         {
             if (Input.GetMouseButton(0))
             {
-                light.GetComponent<SpriteRenderer>().material.color = new Color(250, 255, 0, 100);
+                light.GetComponent<SpriteRenderer>().color = new Color(250, 255, 0, 0.5f);
                 Debug.Log("Light On");
                 isOn = true;
             }
-            else if (Input.GetMouseButtonUp(0))
+            else
             {
-                light.GetComponent<SpriteRenderer>().material.color = new Color(245, 255, 69, 0);
+                light.GetComponent<SpriteRenderer>().color = new Color(245, 255, 69, 0f);
                 isOn = false;
                 Debug.Log("Light Off");
             }

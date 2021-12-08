@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour
         {
             gameOverText.SetActive(true);
             gameOver = true;
-            Time.timeScale = 0f;
+            //Time.timeScale = 0f;
             flash.SetActive(false);
         }
     }
