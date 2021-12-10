@@ -11,6 +11,9 @@ public class OpenDoor : MonoBehaviour
     public Text noKeyText;
     public string dialog;
     public static bool isOpen = false;
+    public AudioSource doorOpen;
+    public AudioSource inMusic;
+    public AudioSource chase;
 
     void Update()
     {
@@ -20,6 +23,9 @@ public class OpenDoor : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 isOpen = true;
+                doorsound();
+                inMusic.Stop();
+                chase.Play();
             }
             else if(Input.GetKeyDown("e") && PuzzleOpen.hasKey == false)
             {
@@ -57,5 +63,10 @@ public class OpenDoor : MonoBehaviour
             dialogBox.SetActive(false);
 
         }
+    }
+
+    public void doorsound()
+    {
+        doorOpen.Play();
     }
 }

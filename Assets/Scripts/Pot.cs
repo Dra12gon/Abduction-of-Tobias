@@ -10,6 +10,7 @@ public class Pot : MonoBehaviour
     public GameObject dialogBox;
     public Text dialogText;
     public string dialog;
+    public AudioSource glass;
 
 
     void Update()
@@ -20,7 +21,8 @@ public class Pot : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 PlayerMovement.isFree = true;
-                Cloth.hasCloth = false; 
+                Cloth.hasCloth = false;
+                glasssound();
             }
             else if (Input.GetKeyDown("e") && Cloth.hasCloth == false)
             {
@@ -58,5 +60,10 @@ public class Pot : MonoBehaviour
             dialogBox.SetActive(false);
 
         }
+    }
+
+    public void glasssound()
+    {
+        glass.Play();
     }
 }

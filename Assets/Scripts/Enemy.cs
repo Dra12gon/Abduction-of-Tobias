@@ -13,12 +13,14 @@ public class Enemy : MonoBehaviour
     public GameObject gameOverText;
     public static bool gameOver = false;
     public GameObject flash;
+    public AudioSource music;
+    public AudioSource caught;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-            rb = this.GetComponent<Rigidbody2D>();
+        Time.timeScale = 1f;
+        rb = this.GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
             player = GameObject.FindWithTag("Player").transform;
         
@@ -53,7 +55,9 @@ public class Enemy : MonoBehaviour
         {
             gameOverText.SetActive(true);
             gameOver = true;
-            //Time.timeScale = 0f;
+            Time.timeScale = 0f;
+            music.Stop();
+            caught.Play();
             flash.SetActive(false);
         }
     }
