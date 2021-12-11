@@ -8,7 +8,10 @@ public class PlayerAim : MonoBehaviour
     public GameObject light;
     public GameObject enemy;
     public GameObject crate;
+    public Transform SpawnKey;
+    public Transform EnemyPosition;
     public bool isOn;
+    private bool hasSpawnKey;
 
     void Update()
     {
@@ -26,33 +29,28 @@ public class PlayerAim : MonoBehaviour
                 isOn = false;
                 Debug.Log("Light Off");
             }
-
-
-
         }
-
 
         void faceMouse()
         {
             Vector3 mousePosition = Input.mousePosition;
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-
             Vector2 direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
-
             transform.up = direction;
-
         }
-
- 
-
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy") && isOn)
         {
             print("Enemy is in range");
             enemy.GetComponent<Enemy>().moveSpeed = 0;
-
+            if(hasSpawnKey == false)
+            {
+                Instantiate(SpawnKey, EnemyPosition.position, EnemyPosition.rotation);
+                hasSpawnKey = true;
+            }
         }
     }
 
@@ -64,5 +62,4 @@ public class PlayerAim : MonoBehaviour
             enemy.GetComponent<Enemy>().moveSpeed = 4;
         }
     }
-
 }

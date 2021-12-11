@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Battery : MonoBehaviour
+public class Win : MonoBehaviour
 {
     public bool isInRange;
     public GameObject EPopup;
-    public static int numOfBattery = 0;
+
     void Update()
-    {   
-        if (isInRange && Input.GetKeyDown("e"))
+    {
+        if (isInRange && Input.GetKeyDown("e") && housekey.hasHouseKey == true)
         {
-            numOfBattery++;
-            gameObject.SetActive(false);
+            SceneManager.LoadScene("WinScreen");
         }
     }
 

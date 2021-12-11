@@ -10,13 +10,10 @@ public class Cloth : MonoBehaviour
 
     void Update()
     {
-        if (isInRange)
+        if (isInRange && Input.GetKeyDown("e"))
         {
-            if (Input.GetKeyDown("e"))
-            {
-                gameObject.SetActive(false);
-                hasCloth = true;
-            }
+            gameObject.SetActive(false);
+            hasCloth = true;
         }
     }
 
@@ -27,7 +24,6 @@ public class Cloth : MonoBehaviour
             isInRange = true;
             print("Player now in range");
             EPopup.SetActive(true);
-
         }
     }
 
@@ -38,7 +34,6 @@ public class Cloth : MonoBehaviour
             isInRange = false;
             print("Player now not in range");
             EPopup.SetActive(false);
-
         }
     }
 }

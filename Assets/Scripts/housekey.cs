@@ -1,22 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class Interactable : MonoBehaviour
+public class housekey : MonoBehaviour
 {
     public bool isInRange;
-    public GameObject EPopup;
-
+    public static bool hasHouseKey;
 
     void Update()
     {
-        if (isInRange)
+        if (isInRange && Input.GetKeyDown("e"))
         {
-            if (Input.GetKeyDown("e"))
-            {
-                gameObject.SetActive(false);
-            }
+            hasHouseKey = true;
+            gameObject.SetActive(false);
         }
     }
 
@@ -25,9 +21,6 @@ public class Interactable : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = true;
-            print("Player now in range");
-            EPopup.SetActive(true);
-
         }
     }
 
@@ -36,9 +29,6 @@ public class Interactable : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = false;
-            print("Player now not in range");
-            EPopup.SetActive(false);
-
         }
     }
 }

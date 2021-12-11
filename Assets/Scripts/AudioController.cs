@@ -11,6 +11,7 @@ public class AudioController : MonoBehaviour
     public Button mutebutt;
     public AudioSource inside;
     public AudioSource outside;
+
     public void Mute()
     {
         if (isMute == false)
