@@ -33,5 +33,6 @@ public class GameOver : MonoBehaviour
         PuzzleOpen.hasLight = false;
         PuzzleScript.solved = false;
         gameOver.SetActive(false);
+        Battery.numOfBattery = 0;
     }
 }

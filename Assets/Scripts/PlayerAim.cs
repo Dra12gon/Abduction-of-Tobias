@@ -14,9 +14,9 @@ public class PlayerAim : MonoBehaviour
     {
         faceMouse();
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) && Battery.numOfBattery == 2)
             {
-                light.GetComponent<SpriteRenderer>().color = new Color(250, 255, 0, 0.5f);
+                light.GetComponent<SpriteRenderer>().color = new Color(250, 255, 0, 0.3f);
                 Debug.Log("Light On");
                 isOn = true;
             }
