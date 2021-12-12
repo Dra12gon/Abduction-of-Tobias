@@ -8,10 +8,9 @@ public class PlayerAim : MonoBehaviour
     public GameObject light;
     public GameObject enemy;
     public GameObject crate;
-    public Transform SpawnKey;
     public Transform EnemyPosition;
     public bool isOn;
-    private bool hasSpawnKey;
+    public GameObject Key;
 
     void Update()
     {
@@ -46,11 +45,7 @@ public class PlayerAim : MonoBehaviour
         {
             print("Enemy is in range");
             enemy.GetComponent<Enemy>().moveSpeed = 0;
-            if(hasSpawnKey == false)
-            {
-                Instantiate(SpawnKey, EnemyPosition.position, EnemyPosition.rotation);
-                hasSpawnKey = true;
-            }
+            Key.SetActive(true);
         }
     }
 

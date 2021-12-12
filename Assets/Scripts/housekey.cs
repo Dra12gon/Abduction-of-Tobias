@@ -1,18 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class housekey : MonoBehaviour
 {
     public bool isInRange;
     public static bool hasHouseKey;
+    public GameObject dialogBox;
+    public Text dialogText;
+    public string dialog;
+    private bool collected;
 
     void Update()
     {
+        transform.parent = null;
+        
         if (isInRange && Input.GetKeyDown("e"))
         {
-            hasHouseKey = true;
-            gameObject.SetActive(false);
+            
+            if (dialogBox.activeInHierarchy)
+            {
+                dialogBox.SetActive(false);
+                hasHouseKey = true;
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                dialogBox.SetActive(true);
+                dialogText.text = dialog;
+                collected = true;
+            }
         }
     }
 
@@ -29,6 +47,13 @@ public class housekey : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = false;
+
+            if (collected)
+            {
+                dialogBox.SetActive(false);
+                hasHouseKey = true;
+                gameObject.SetActive(false);
+            }
         }
     }
 }

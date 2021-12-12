@@ -62,9 +62,11 @@ public class PuzzleScript : MonoBehaviour
             }
         }
     }
-    public void skipPuzzle()
+
+    public void xButton()
     {
-        skip = true;
+        //skip = true;
+        SceneManager.LoadScene("Level1");
     }
 
     public void Shuffle()
