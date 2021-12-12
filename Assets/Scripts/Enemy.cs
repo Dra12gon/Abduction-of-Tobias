@@ -21,9 +21,8 @@ public class Enemy : MonoBehaviour
     {
         Time.timeScale = 1f;
         rb = this.GetComponent<Rigidbody2D>();
-            animator = GetComponent<Animator>();
-            player = GameObject.FindWithTag("Player").transform;
-        
+        animator = GetComponent<Animator>();
+        player = GameObject.FindWithTag("Player").transform;
     }
 
     // Update is called once per frame
@@ -61,7 +60,4 @@ public class Enemy : MonoBehaviour
             flash.SetActive(false);
         }
     }
-
-
-
 }

@@ -15,6 +15,8 @@ public class PuzzleOpen : MonoBehaviour
     public GameObject dialogBox;
     public Text dialogText;
     public string dialog;
+    public string takeItems;
+    private bool hasTaken;
 
     void Update()
     {
@@ -24,10 +26,19 @@ public class PuzzleOpen : MonoBehaviour
             {
                 if (PuzzleScript.solved == true)
                 {
-                    hasKey = true;
-                    hasLight = true;
-                    gameObject.SetActive(false);
-                    light.SetActive(true);
+                    if (dialogBox.activeInHierarchy)
+                    {
+                        hasKey = true;
+                        hasLight = true;
+                        gameObject.SetActive(false);
+                        light.SetActive(true);
+                    }
+                    else
+                    {
+                        dialogBox.SetActive(true);
+                        dialogText.text = takeItems;
+                        hasTaken = true;
+                    }
                 }
                 else
                 {
@@ -92,6 +103,14 @@ public class PuzzleOpen : MonoBehaviour
             print("Player now not in range");
             EPopup.SetActive(false);
             dialogBox.SetActive(false);
+
+            if (hasTaken)
+            {
+                hasKey = true;
+                hasLight = true;
+                gameObject.SetActive(false);
+                light.SetActive(true);
+            }
         }
     }
 }

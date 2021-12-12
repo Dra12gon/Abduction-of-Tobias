@@ -1,21 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Cloth : MonoBehaviour
 {
     public bool isInRange;
     public GameObject EPopup;
+    public string dialog;
+    public GameObject dialogBox;
+    public Text dialogText;
     public static bool hasCloth = false;
+    private bool hasPicked;
 
     void Update()
     {
-        if (isInRange)
+        if (isInRange && Input.GetKeyDown("e"))
         {
-            if (Input.GetKeyDown("e"))
+            if (dialogBox.activeInHierarchy)
             {
+                dialogBox.SetActive(false);
                 gameObject.SetActive(false);
                 hasCloth = true;
+            }
+            else
+            {
+                dialogBox.SetActive(true);
+                dialogText.text = dialog;
+                hasPicked = true;
             }
         }
     }
@@ -27,7 +39,6 @@ public class Cloth : MonoBehaviour
             isInRange = true;
             print("Player now in range");
             EPopup.SetActive(true);
-
         }
     }
 
@@ -38,7 +49,12 @@ public class Cloth : MonoBehaviour
             isInRange = false;
             print("Player now not in range");
             EPopup.SetActive(false);
-
+            dialogBox.SetActive(false);
+            if (hasPicked)
+            {
+                gameObject.SetActive(false);
+                hasCloth = true;
+            }
         }
     }
 }

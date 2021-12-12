@@ -8,6 +8,7 @@ public class Inventory : MonoBehaviour
     public GameObject key;
     public GameObject flashlight;
     public GameObject cloth;
+    public GameObject houseKey;
 
 
     // Update is called once per frame
@@ -30,6 +31,11 @@ public class Inventory : MonoBehaviour
         else if (Cloth.hasCloth == false)
         {
             cloth.SetActive(false);
+        }
+
+        if (housekey.hasHouseKey == true)
+        {
+            houseKey.SetActive(true);
         }
     }
 }

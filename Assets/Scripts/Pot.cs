@@ -10,8 +10,9 @@ public class Pot : MonoBehaviour
     public GameObject dialogBox;
     public Text dialogText;
     public string dialog;
+    public string breakPot;
+    private bool broken;
     public AudioSource glass;
-
 
     void Update()
     {
@@ -19,10 +20,19 @@ public class Pot : MonoBehaviour
         {
             if (Input.GetKeyDown("e") && Cloth.hasCloth == true)
             {
-                gameObject.SetActive(false);
-                PlayerMovement.isFree = true;
-                Cloth.hasCloth = false;
-                glasssound();
+                if (dialogBox.activeInHierarchy)
+                {
+                    gameObject.SetActive(false);
+                    PlayerMovement.isFree = true;
+                    Cloth.hasCloth = false;
+                    glasssound();
+                }
+                else
+                {
+                    dialogBox.SetActive(true);
+                    dialogText.text = breakPot;
+                    broken = true;
+                }
             }
             else if (Input.GetKeyDown("e") && Cloth.hasCloth == false)
             {
@@ -59,6 +69,13 @@ public class Pot : MonoBehaviour
             EPopup.SetActive(false);
             dialogBox.SetActive(false);
 
+            if (broken)
+            {
+                gameObject.SetActive(false);
+                PlayerMovement.isFree = true;
+                Cloth.hasCloth = false;
+                glasssound();
+            }
         }
     }
 

@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float moveSpeed;
-    public GameObject player;
     public Rigidbody2D rb;
     public Animator animator;
     public static bool isFree;
@@ -25,10 +24,8 @@ public class PlayerMovement : MonoBehaviour
 
             animator.SetFloat("Horizontal", horiz);
             animator.SetFloat("Vertical", vert);
-
             animator.SetFloat("Speed", newVelocity.sqrMagnitude);
             animator.SetBool("isFree", isFree);
-            
         }
     }
 }

@@ -6,11 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public GameObject gameOver;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -34,5 +29,6 @@ public class GameOver : MonoBehaviour
         PuzzleScript.solved = false;
         gameOver.SetActive(false);
         Battery.numOfBattery = 0;
+        housekey.hasHouseKey = false;
     }
 }
