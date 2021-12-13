@@ -12,14 +12,14 @@ public class PuzzleScript : MonoBehaviour
     public static bool solved = false;
     public bool skip = false;
 
-    // Start is called before the first frame update
+
+
     void Start()
     {
         camera = Camera.main;
         Shuffle();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Debug.Log(SceneManager.sceneCount);
@@ -54,7 +54,7 @@ public class PuzzleScript : MonoBehaviour
                 }
 
             }
-            if (correctTiles == tiles.Length - 1 || skip == true)
+            if (correctTiles == tiles.Length - 1 || skip)
             {
                 Debug.Log("solved");
                 solved = true;
@@ -65,7 +65,7 @@ public class PuzzleScript : MonoBehaviour
 
     public void xButton()
     {
-        //skip = true;
+        skip = true;
         SceneManager.LoadScene("Level1");
     }
 

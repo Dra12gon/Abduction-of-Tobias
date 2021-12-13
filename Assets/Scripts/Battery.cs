@@ -21,7 +21,7 @@ public class Battery : MonoBehaviour
             if (dialogBox.activeInHierarchy)
             {
                 dialogBox.SetActive(false);
-                numOfBattery++;
+                //numOfBattery++;
                 gameObject.SetActive(false);
             }
             else
