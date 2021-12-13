@@ -65,7 +65,7 @@ public class PuzzleScript : MonoBehaviour
 
     public void xButton()
     {
-        skip = true;
+        //skip = true;
         SceneManager.LoadScene("Level1");
     }
 
